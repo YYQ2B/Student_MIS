@@ -1,0 +1,113 @@
+
+/*数据库学生表还有一些错误*/
+drop database xeon_misdb;
+
+create database xeon_misdb;
+
+use xeon_misdb;
+
+/*创建学生表(有错误)*/
+create table xeon_student_info(
+stuid char(10) primary key,
+name varchar(20) ,
+sex char(2) ,
+nationid varchar(9) ,
+classid char(6) ,
+grade varchar(9) ,
+identify varchar(18) ,
+birth varchar(8) ,
+govface varchar(10) ,
+tel varchar(20) ,
+originid varchar(10) ,
+location_countyid char(6) ,
+family varchar(20) ,
+registerstatus varchar(10) ,
+ifpoor char(2) ,
+ifcountryloan char(2) ,
+iforigin char(2) ,
+ifcommerial_insurance char(2) ,
+ifmedical_insurance char(2) ,
+dormid char(4),
+foreign key(nationid) references xeon_nationlities(nationid),
+foreign key(classid) references xeon_class(classid),
+foreign key(originid) references xeon_orign(originid),
+foreign key(location_countyid) references xeon_location_county(location_countyid),
+foreign key(dormid) references xeon_dorm(dormid) 
+);
+
+/*创建民族表*/
+create table xeon_nationlities(
+nationid varchar(9) primary key,
+nation varchar(9)
+);
+
+/*创建学院表*/
+create table xeon_institute(
+instituteid char(2) primary key,
+institute varchar(20)
+);
+
+/*创建专业表*/
+create table xeon_major(
+majorid char(4) primary key,
+major varchar(20),
+instituteid char(2),
+foreign key(instituteid) references xeon_institute(instituteid)
+);
+
+/*创建班级表*/
+create table xeon_class(
+classid char(6) primary key,
+majorid char(4),
+foreign key(majorid) references xeon_major(majorid)
+);
+
+/*生源地表*/
+create table xeon_origin(
+originid varchar(10) primary key,
+origin varchar(20)
+);
+
+/*创建省表*/
+create table xeon_location_province(
+location_provinceid char(2) primary key,
+location_province varchar(10)
+);
+
+/*创建市表*/
+create table xeon_location_city(
+location_cityid char(4) primary key,
+location_city varchar(10),
+location_provinceid char(2),
+foreign key(location_provinceid) references xeon_location_province(location_provinceid)
+);
+
+/*创建县表*/
+create table xeon_location_county(
+location_countyid char(6) primary key,
+location_county varchar(10),
+location_cityid char(4),
+foreign key(location_cityid) references xeon_location_city(location_cityid)
+);
+
+/*创建公寓表*/
+create table xeon_dormbuilding(
+dormbuildingid char(2) primary key,
+dormbuilding varchar(10)
+);
+
+/*创建寝室表*/
+create table xeon_dorm(
+dormid char(4) primary key,
+dorm varchar(10),
+dormbuildingid char(2),
+foreign key(dormbuildingid) references xeon_dormbuilding(dormbuildingid)
+);
+
+/*辅导员表*/
+create table xeon_instructor_info(
+instructorid varchar(10) primary key,
+instructor_name varchar(10),
+classid char(6),
+foreign key(classid) references xeon_class(classid)
+);
