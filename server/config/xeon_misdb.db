@@ -1,39 +1,10 @@
 
-/*数据库学生表还有一些错误*/
+/*完整数据库学生表，已验证*/
 drop database xeon_misdb;
 
 create database xeon_misdb;
 
 use xeon_misdb;
-
-/*创建学生表(有错误)*/
-create table xeon_student_info(
-stuid char(10) primary key,
-name varchar(20) ,
-sex char(2) ,
-nationid varchar(9) ,
-classid char(6) ,
-grade varchar(9) ,
-identify varchar(18) ,
-birth varchar(8) ,
-govface varchar(10) ,
-tel varchar(20) ,
-originid varchar(10) ,
-location_countyid char(6) ,
-family varchar(20) ,
-registerstatus varchar(10) ,
-ifpoor char(2) ,
-ifcountryloan char(2) ,
-iforigin char(2) ,
-ifcommerial_insurance char(2) ,
-ifmedical_insurance char(2) ,
-dormid char(4),
-foreign key(nationid) references xeon_nationlities(nationid),
-foreign key(classid) references xeon_class(classid),
-foreign key(originid) references xeon_orign(originid),
-foreign key(location_countyid) references xeon_location_county(location_countyid),
-foreign key(dormid) references xeon_dorm(dormid) 
-);
 
 /*创建民族表*/
 create table xeon_nationlities(
@@ -110,4 +81,33 @@ instructorid varchar(10) primary key,
 instructor_name varchar(10),
 classid char(6),
 foreign key(classid) references xeon_class(classid)
+);
+
+/*创建学生表*/
+create table xeon_student_info(
+stuid char(10) primary key,
+name varchar(20) ,
+sex char(2) ,
+nationid varchar(9) ,
+classid char(6) ,
+grade varchar(9) ,
+identify varchar(18) ,
+birth varchar(8) ,
+govface varchar(10) ,
+tel varchar(20) ,
+originid varchar(10) ,
+location_countyid char(6) ,
+family varchar(20) ,
+registerstatus varchar(10) ,
+ifpoor char(2) ,
+ifcountryloan char(2) ,
+iforigin char(2) ,
+ifcommerial_insurance char(2) ,
+ifmedical_insurance char(2) ,
+dormid char(4),
+foreign key(nationid) references xeon_nationlities(nationid),
+foreign key(classid) references xeon_class(classid),
+foreign key(originid) references xeon_origin(originid),
+foreign key(location_countyid) references xeon_location_county(location_countyid),
+foreign key(dormid) references xeon_dorm(dormid) 
 );
