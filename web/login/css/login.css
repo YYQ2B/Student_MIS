@@ -1,0 +1,64 @@
+@font-face {
+	font-family:dingding;
+	src:url(../font/dingding.otf);
+}
+
+body {
+color: #000;
+margin: 0 auto;
+background: #FDFDFD url(../img/bg_main.gif) repeat;
+background-attachment: fixed;
+position: relative;
+}
+
+body {
+line-height: 1;
+}
+.control-label,.checkbox{
+	font-family: dingding;
+	font-size: 2.5em;
+}
+
+.form-horizontal{
+	max-width: 270px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+outline: 0;
+border: 1px solid #92BBD2;
+background: #FAFDFE url(bg_input_gray.png) center top repeat-x;
+box-shadow: 0 0 5px rgba(146,187,210,.5);
+-moz-box-shadow: 0 0 5px rgba(146,187,210,.5);
+-webkit-box-shadow: 0 0 5px rgba(146,187,210,.5);
+}
+
+input[type=text], input[type=email], input[type=password] {
+color: #4B5056;
+font-family: omnes-pro,arial,sans-serif;
+font-size: 16px;
+font-weight: 500;
+width: 100%;
+padding: 7px 12px;
+border: 1px solid #CCC;
+background: #F5FBFC url(../img/bg_input_blue.png) center top repeat-x;
+outline: 0;
+border-radius: 6px;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+
+.btn{
+	background-color: #5988b0;
+	color: #ffffff;
+}
+
+.btn:hover{
+	background-color: #4B5056;
+	color: #ffffff;
+}
