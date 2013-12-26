@@ -1,4 +1,4 @@
-
+/*为学生表字段增加了约束*/
 /*完整数据库学生表，已验证*/
 drop database xeon_misdb;
 
@@ -85,25 +85,25 @@ foreign key(classid) references xeon_class(classid)
 
 /*创建学生表*/
 create table xeon_student_info(
-stuid char(10) primary key,
-name varchar(20) ,
-sex char(2) ,
+stuid varchar(10) primary key,	
+name varchar(30) not null, /*姓名长度改为30(15字)*/
+sex char(2) check(sex='男' or sex='女' ),	/*增加约束*/
 nationid varchar(9) ,
 classid char(6) ,
-grade varchar(9) ,
-identify varchar(18) ,
-birth varchar(8) ,
-govface varchar(10) ,
-tel varchar(20) ,
+grade smallint check(grade >1992 and grade<2113),/*年级改为短整形增加约束*/
+identify varchar(18) not null,
+birth date not null,	/*生日改为日期*/
+govface varchar(10) check(govface='党员' or govface='团员' or govface='预备党员'),/*增加约束*/
+tel varchar(11) not null,	/*电话长度改为11*/
 originid varchar(10) ,
 location_countyid char(6) ,
-family varchar(20) ,
-registerstatus varchar(10) ,
-ifpoor char(2) ,
-ifcountryloan char(2) ,
-iforigin char(2) ,
-ifcommerial_insurance char(2) ,
-ifmedical_insurance char(2) ,
+family varchar(20) not null,	/*增加非空*/
+registerstatus varchar(10) not null,
+ifpoor char(1) check(ifpoor='0' or ifpoor='1'),	/*长度改为1增加约束*/
+ifcountryloan char(1) check(ifcountryloan='0' or ifcountryloan='1'),/*长度改为1增加约束*/
+iforigin char(1) check(iforigin='0' or iforigin='1'),	/*长度改为1增加约束*/
+ifcommerial_insurance char(1) check(ifcommerial_insurance='0' or ifcommerial_insurance='1') ,/*长度改为1增加约束*/
+ifmedical_insurance char(1) check(ifmedical_insurance='0' or ifmedical_insurance='1'),/*长度改为1增加约束*/
 dormid char(4),
 foreign key(nationid) references xeon_nationlities(nationid),
 foreign key(classid) references xeon_class(classid),
