@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>学生管理系统</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+   <!-- <link rel="stylesheet" type="text/css" href="static/css/index.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/scroll.css"> -->
+   <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
+    <script type="text/javascript" src="extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="extjs/locale/ext-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="static/js/LocalTopic.js"></script>
+    <!-- 浮动条-->
+    <LINK rel=stylesheet type=text/css href="static/css/float.css">
+        <SCRIPT type=text/javascript src="static/js/jquery.js"></SCRIPT>
+        <SCRIPT type=text/javascript src="static/js/kefu.js"></SCRIPT>
+         <script type="text/javascript"src="static/js/floatmanue.js"> </script>
+                
+            
+    </head>
+    <body>
+        <!--@contentEl content element for banner content -->
+      <!--   <div id='content-banner' class='content-ele-banner'>
+            <img src="static/img/logo.png" alt="logo......">
+            <div class="user-info">
+                <span title="00000000000" id="eUserInfo-name">老师 <em id="eUserInfo-ID">[00000000000]</em>，您好</span>
+                <a href="logout.do" class='logout'>退出</a>
+
+            </div>
+        </div> -->
+        <div id="floatTools" class="float0831">
+          <div class=floatL> 
+            <a style="DISPLAY: none" id="aFloatTools_Show" class="btnOpen" title=选择 onclick="javascript:$('#divFloatToolsView').animate({width: 'show', opacity: 'show'}, 'normal',function(){ $('#divFloatToolsView').show();kf_setCookie('RightFloatShown', 0, '', '/', 'www.istudy.com.cn'); });$('#aFloatTools_Show').attr('style','display:none');$('#aFloatTools_Hide').attr('style','display:block');" 
+            href="javascript:void(0);">展开</a> 
+            <a id=aFloatTools_Hide class="btnCtn" title=关闭 onclick="javascript:$('#divFloatToolsView').animate({width: 'hide', opacity: 'hide'}, 'normal',function(){ $('#divFloatToolsView').hide();kf_setCookie('RightFloatShown', 1, '', '/', 'www.istudy.com.cn'); });$('#aFloatTools_Show').attr('style','display:block');$('#aFloatTools_Hide').attr('style','display:none');" href="javascript:void(0);">收缩 </a> 
+        </div>
+        <div id="divFloatToolsView" class="floatR">
+            <div class=cn>
+          <form action="" method="get" id="selections"> 
+            <fieldset class="radios">
+             <legend>学生信息选项   </legend> 
+                 <label for="radio-01" class="label_radio">
+                        <input type="radio" checked="" value="1" id="radio-01" name="sample-radio" />男
+                    </label>
+                    <label for="radio-02" class="label_radio">
+                        <input type="radio" value="1" id="radio-02" name="sample-radio" />女
+                    </label>
+                   
+          </fieldset>
+      
+            <fieldset class="checkboxes">
+             <legend>辅导员信息选项  </legend> 
+             
+             <label for="checkbox-01" class="label_check"><input type="checkbox" checked="" value="1" id="checkbox-01" name="sample-checkbox-01" />系1</label>
+             
+             <label for="sex" class="label_check"> 系2<input type="checkbox" value="1" id="checkbox-02" name="sample-checkbox-02" /></label> 
+             <label for="sex" class="label_check"> 系3<input name="sex" type="checkbox" value="1" /> </label> 
+             <label for="sex" class="label_check"> 系4<input name="sex" type="checkbox" value="1" /></label> 
+             <label for="sex" class="label_check"> 系5<input name="sex" type="checkbox" value="1" /> </label>  
+           </fieldset>
+             
+          <fieldset>
+             <legend>特殊民族信息选项</legend> 
+                 <p><label for="sex"> 藏族<input name="sex" type="checkbox" value="m" /> </label> 
+                 <label for="sex"> 维吾尔族<input name="sex" type="checkbox" value="fm" /></label> </p>
+                 <p><label for="sex"> 族3<input name="sex" type="checkbox" value="m" /> </label> 
+                 <label for="sex"> 族4<input name="sex" type="checkbox" value="fm" /></label> </p>
+                 <p><label for="sex"> 族5<input name="sex" type="checkbox" value="m" /> </label>
+                 <label for="sex"> 族6<input name="sex" type="checkbox" value="m" /> </label>  
+                 </p> 
+                </fieldset>
+            <fieldset>
+             <legend>在校状态信息选项</legend> 
+                 <p><label for="sex"> 在校<input name="sex" type="checkbox" value="m" /> </label> 
+                 <label for="sex"> 休学<input name="sex" type="checkbox" value="fm" /></label> </p>
+               </fieldset> 
+          <fieldset>
+             <legend>在校状态信息选项 </legend> 
+                 <p><label for="sex"> 在校<input name="sex" type="checkbox" value="m" /> </label> 
+                 <label for="sex"> 休学<input name="sex" type="checkbox" value="fm" /></label> </p>
+               
+            </fieldset>
+         <input type="submit"value="确认" name="submit">
+     
+     </form> 
+
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="app.js"></script>
+
+
+</body>
+</html>
