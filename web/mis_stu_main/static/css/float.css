@@ -1,0 +1,161 @@
+
+.float0831 {
+	position: fixed; top: 80px; right: 23px; _position: absolute;
+	z-index: 10;
+	font-size: 12px;
+
+}
+.float0831 A {
+	color: #00a0e9
+}
+.float0831 A:hover {
+	color: #ff8100; text-decoration: none;
+}
+.float0831 .floatL {
+	position: relative; width: 28px; float: left
+}
+.float0831 .floatL A {
+	text-indent: -9999px; display: block; /*font-size: 0px*/
+}
+
+.float0831 .floatR {
+	PADDING-BOTTOM: 15px; WIDTH:348px; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: -131px bottom; FLOAT: left;
+}
+
+
+
+.float0831 .cn {
+	BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: -262px 0px;
+
+}
+
+
+.float0831 .btnOpen {
+	BACKGROUND: url(../img/float_s.gif) no-repeat
+}
+.float0831 .btnOpen_n {
+	BACKGROUND: url(../img/float_s.gif) no-repeat
+}
+.float0831 .btnCtn {
+	BACKGROUND: url(../img/float_s.gif) no-repeat
+}
+
+.float0831 .btnOpen {
+	BACKGROUND-POSITION: -39px -385px
+}
+.float0831 .btnOpen_n {
+	BACKGROUND-POSITION: 0px -530px
+}
+.float0831 .btnCtn {
+	BACKGROUND-POSITION: 0px -383px
+}
+
+.float0831 .btnOpen {
+	POSITION: relative; WIDTH: 50px; HEIGHT: 115px; TOP: 80px; LEFT: 2px
+}
+.float0831 .btnOpen_n {
+	POSITION: relative; WIDTH: 28px; HEIGHT: 118px; TOP: 80px; LEFT: 2px
+}
+.float0831 .btnCtn {
+	POSITION: relative; WIDTH: 40px; HEIGHT: 120px; TOP: 80px; LEFT: 2px
+}
+.float0831 .btnOpen {
+	TOP: 118px; LEFT: 3px
+}
+.float0831 .btnOpen_n {
+	TOP: 118px; LEFT: 1px
+}
+.float0831 .btnCtn {
+	TOP: 118px; LEFT: -11px
+}
+
+
+#selections { 
+	padding: 18px 20px 0; 
+	margin:20px auto;
+	background-color: #0064cd;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#c3daf9), to(#0064cd));
+	background-image: -moz-linear-gradient(#c3daf9, #0064cd);
+	background-image: -ms-linear-gradient(#c3daf9, #0064cd);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+	/*background-image: -webkit-linear-gradient(#049cdb, #0064cd);*/
+	background-image: -webkit-linear-gradient(#c3daf9, #0064cd);
+	background-image: -o-linear-gradient(#c3daf9, #0064cd);
+	background-image: linear-gradient(#c3daf9, #0064cd);	
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	-khtml-border-radius: 10px; 
+	border-radius: 10px;			
+	-webkit-box-shadow: 0 5px 12px rgba(0,0,0,.4); 
+	-moz-box-shadow: 0 5px 12px rgba(0,0,0,.4); 
+	-khtml-box-shadow: 0 5px 12px rgba(0,0,0,.4); 
+	box-shadow: 0 5px 12px rgba(0,0,0,.4); 
+}
+fieldset { 
+	border: 0; 
+	padding-bottom: 9px;
+}
+legend{
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2); 
+	font-size: 14px;
+	font-weight:bold;
+	padding:0px 8px 0px 16px;
+	cursor: pointer; 
+	/*border:1px solid #1E7ACE;	*/
+	/*background:#fff;*/
+}
+label { 
+	/*display: block; */
+	line-height: 20px; 
+	padding-bottom: 9px; 
+}
+
+.radios,.checkboxes { 
+	padding-top: 18px;
+	/*border-top: 1px solid #049CDB;*/
+	border-top: 1px solid #D3ECF6;
+
+	/*border-bottom: 1px solid #0064cd;*/
+}
+
+/*.has-js .label_check,
+.has-js .label_radio { 
+	padding-left: 34px; 
+}
+
+.has-js .label_radio, 
+.has-js .label_check{ 
+	background: url(../img/checkbox-radio-bg.png) no-repeat; 
+}
+.has-js .label_radio { 
+	background-position: 0 0; 
+}
+.has-js .label_check { 
+	background-position: 0 -100px
+}
+.has-js label.c_on { 
+	background-position: 0 -150px;
+}
+.has-js label.r_on { 
+	background-position: 0 -50px; 
+}
+.has-js .label_check input,
+.has-js .label_radio input { 
+	position: absolute; 
+	left: -9999px; 
+} */
+
+#year,#nationality{
+	width: 50px;
+}
+input[type="submit"]{
+	margin: 15px 15px 21px 105px;
+	width: 60px;
+	height:26px;
+}
+input[type="radio"],input[type="checkbox"]{
+	margin-right: 5px; 
+	cursor: pointer; 
+	border: 0px;
+}
+
