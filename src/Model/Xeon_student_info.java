@@ -212,4 +212,8 @@ public class Xeon_student_info {
 		this.dormid = dormid;
 
 	}
+	
+	public String toString(){
+		return "this is a git test from tom";
+	}
 }
